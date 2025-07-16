@@ -3,8 +3,6 @@
 This is a simple Snake game created **entirely with Python and Pygame**, without any game engine. It's my first full game project, aimed at learning game development fundamentals using only raw code and logic.
 
 
--
-
 
 ## 📷 Screenshot
 
@@ -12,8 +10,6 @@ Here is a preview of the gameplay:
 
 ![Snake Game Screenshot](screenshot_20250520-163610.png)
 
-
--
 
 
 ## 📦 Requirements
@@ -23,8 +19,6 @@ Here is a preview of the gameplay:
 
 > 🧪 Tested on Python 3.9 & 3.10 — newer versions like 3.12+ may not run on Windows 7.
 
-
--
 
 
 ## 🛠 Installation Guide
