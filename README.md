@@ -1,4 +1,4 @@
-﻿# 🐍 Python Snake Game (Pygame)
+# 🐍 Python Snake Game (Pygame)
 
 This is a simple Snake game created **entirely with Python and Pygame**, without any game engine. It's my first full game project, aimed at learning game development fundamentals using only raw code and logic.
 
