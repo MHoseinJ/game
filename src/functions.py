@@ -1,6 +1,6 @@
 import pygame
 
-def init(width: int, height: int, title: string):
+def init(width: int, height: int, title: str):
 
     pygame.init()
 
