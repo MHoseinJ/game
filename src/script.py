@@ -3,5 +3,5 @@ class Script:
     def start(self):
         return 0
 
-    def update(self):
+    def update(self, dt):
         return 0
