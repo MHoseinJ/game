@@ -1,12 +1,13 @@
 class GameObject:
 
-    def __init__(self):
-        self.name = ""
-        self.x = 0
-        self.y = 0
-        self.color = (0,0,0)
-        self.w = 0
-        self.h = 0
+    def __init__(self, name = "", x = 0, y =0 , color = (0,0,0), w = 0, h = 0, childs = []):
+        self.name = name
+        self.x = x
+        self.y = y
+        self.color = color
+        self.w = w
+        self.h = h
+        self.childs = childs
 
     def set_pos(self, x, y):
         self.x = x
@@ -22,5 +23,5 @@ class GameObject:
     def set_name(self, name):
         self.name = name
 
-    def draw(self):
-        return 0
+    def get_name(self):
+        return self.name
