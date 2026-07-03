@@ -9,19 +9,23 @@ class GameObject:
         self.h = h
         self.childs = childs
 
-    def set_pos(self, x, y):
+    def set_pos(self, x, y) -> None:
         self.x = x
         self.y = y
 
-    def set_size(self, w, h):
+    def set_size(self, w, h) -> None:
         self.w = w
         self.h = h
 
-    def set_color(self, color):
+    def set_color(self, color) -> None:
         self.color = color
 
-    def set_name(self, name):
+    def set_name(self, name) -> None:
         self.name = name
 
-    def get_name(self):
+    def get_name(self) -> str:
         return self.name
+
+    def get_childs(self) -> list[GameObject]:
+        return self.childs
+    

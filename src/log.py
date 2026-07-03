@@ -9,11 +9,11 @@ class Type(Enum):
 def print_suffix(type: Type):
 
     match type:
-        case Type.ERROR.value:
+        case Type.ERROR:
             print("\33[41m[ERROR]: \033[0m")
-        case Type.WARN.value:
+        case Type.WARN:
             print("\33[43m[WARN]: \033[0m")
-        case Type.INFO.value:
+        case Type.INFO:
             print("\33[100m[INFO]: \033[0m")
         case default:
             print("")

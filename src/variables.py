@@ -1,3 +1,4 @@
+from enum import Enum
 from src.gameobject import GameObject
 
 WIDTH  = 20
@@ -27,5 +28,14 @@ GAMEOBJECTS = [
     GameObject("apple", 0, 0, COLORS["apple"], BLOCK_SIZE, BLOCK_SIZE, []),
 
     # snake
-    GameObject("snake", 0, 0, COLORS["snake"], 0, 0, [])
+    GameObject("snake", 0, 0, COLORS["white"], 0, 0, [])
 ]
+
+# you can change these values according to pygame key codes
+class DIRECTIONS(Enum):
+    TOP = "up"
+    DOWN = "down"
+    LEFT = "left"
+    RIGHT = "right"
+
+KEYS = []

@@ -22,9 +22,9 @@ while running:
     variables.SCREEN.fill(variables.COLORS["black"])
 
     # proccessing keys
-    keys = functions.get_events(pygame.event.get())
-
-    if "quit" in keys:
+    variables.KEYS = functions.get_events(pygame.event.get())
+    
+    if "quit" in variables.KEYS:
         running = False
     
     delta_time = time.perf_counter() - start
@@ -33,3 +33,5 @@ while running:
 
     # draw everything pending on surface
     pygame.display.flip()
+
+    time.sleep(0.1)

@@ -1,5 +1,6 @@
+from src.log import log, Type
 from src.gameobject import GameObject
-from src.variables import GAMEOBJECTS
+from src.variables import GAMEOBJECTS, KEYS
 import pygame
 
 def init(width: int, height: int, block_size: int, title: str):
