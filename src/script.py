@@ -1,7 +1,7 @@
 class Script:
 
     def start(self):
-        return 0
+        pass
 
     def update(self, dt):
-        return 0
+        pass
