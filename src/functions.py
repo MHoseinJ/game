@@ -1,6 +1,7 @@
+from src.script import Script
 from src.log import log, Type
 from src.gameobject import GameObject
-from src.variables import GAMEOBJECTS, KEYS
+import src.variables as variables
 import pygame
 
 def init(width: int, height: int, block_size: int, title: str):
@@ -34,9 +35,18 @@ def call_update(scripts, dt):
     for script in scripts:
         script.update(dt)
 
-def find_object(name: str, objects: list[GameObject] = GAMEOBJECTS) -> GameObject:
+def find_object(name: str, objects: list[GameObject] = variables.GAMEOBJECTS) -> GameObject:
     for object in objects:
         if object.get_name() == name:
             return object
 
-    return GameObject()
+    log(Type.ERROR,"there is no gameobject with this name")
+    exit()
+
+def find_script(name: str) -> Script:
+    for script in variables.SCRIPTS:
+        if script.__class__.__name__ == name:
+            return script
+
+    log(Type.ERROR, "there is no script with this name")
+    exit()
