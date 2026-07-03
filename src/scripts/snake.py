@@ -19,20 +19,27 @@ class Snake(Script):
         keys_down = variables.KEYS
         
         if len(keys_down):
-            print(keys_down[-1] + "ridam dahanet")
+
             match keys_down[-1]:
                 case variables.DIRECTIONS.TOP.value:
-                    self.direction = variables.DIRECTIONS.TOP
-                    self.velocity = (0, 1)
+                    if not self.direction == variables.DIRECTIONS.DOWN:
+                        self.direction = variables.DIRECTIONS.TOP
+                        self.velocity = (0, 1)
+                        
                 case variables.DIRECTIONS.DOWN.value:
-                    self.direction = variables.DIRECTIONS.DOWN
-                    self.velocity = (0, -1)
+                    if not self.direction == variables.DIRECTIONS.TOP:
+                        self.direction = variables.DIRECTIONS.DOWN
+                        self.velocity = (0, -1)
+                        
                 case variables.DIRECTIONS.LEFT.value:
-                    self.direction = variables.DIRECTIONS.LEFT
-                    self.velocity = (-1, 0)
+                    if not self.direction == variables.DIRECTIONS.RIGHT:
+                        self.direction = variables.DIRECTIONS.LEFT
+                        self.velocity = (-1, 0)
+                        
                 case variables.DIRECTIONS.RIGHT.value:
-                    self.direction = variables.DIRECTIONS.RIGHT
-                    self.velocity = (1, 0)
+                    if not self.direction == variables.DIRECTIONS.LEFT:
+                        self.direction = variables.DIRECTIONS.RIGHT
+                        self.velocity = (1, 0)
             print(keys_down[-1])
 
         # add head            
