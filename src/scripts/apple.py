@@ -1,7 +1,7 @@
 from src.functions import find_object
 from src.script import Script
 from random import randint
-from src.variables import WIDTH, HEIGHT
+from src.variables import WIDTH, HEIGHT, BLOCK_SIZE
 
 class Apple(Script):
 
@@ -18,4 +18,5 @@ class Apple(Script):
 
             self.pos = [x, y]
 
-            self.game_object.set_pos(self.pos[0], self.pos[1])
+            self.game_object.set_pos(self.pos[0] * BLOCK_SIZE, self.pos[1] * BLOCK_SIZE)
+            self.is_available = True
