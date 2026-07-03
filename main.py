@@ -1,3 +1,6 @@
+from src.scripts.background import Background
+from src.scripts.apple import Apple
+from src.render import render_gameobjects
 from src.scripts.snake import Snake
 import pygame
 from src import functions
@@ -9,7 +12,9 @@ variables.SCREEN = functions.init(variables.WIDTH, variables.HEIGHT, variables.B
 
 running = True
 
+variables.SCRIPTS.append(Background())
 variables.SCRIPTS.append(Snake())
+variables.SCRIPTS.append(Apple())
 
 # call start
 functions.call_start(variables.SCRIPTS)
@@ -31,6 +36,9 @@ while running:
 
     functions.call_update(variables.SCRIPTS, delta_time)
 
+    # draw things
+    render_gameobjects(variables.SCREEN)
+    
     # draw everything pending on surface
     pygame.display.flip()
 

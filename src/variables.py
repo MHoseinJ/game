@@ -4,7 +4,7 @@ from src.gameobject import GameObject
 WIDTH  = 20
 HEIGHT = 20
 
-BLOCK_SIZE = 20
+BLOCK_SIZE = 30
 
 TITLE = "game python"
 
@@ -24,11 +24,14 @@ SCRIPTS = [
 ]
 
 GAMEOBJECTS = [
+    # background
+    GameObject("background", 0, 0, COLORS["black"], 0, 0, []),
+    
     # apple
     GameObject("apple", 0, 0, COLORS["apple"], BLOCK_SIZE, BLOCK_SIZE, []),
 
     # snake
-    GameObject("snake", 0, 0, COLORS["white"], 0, 0, [])
+    GameObject("snake", 0, 0, COLORS["black"], 0, 0, []),
 ]
 
 # you can change these values according to pygame key codes
